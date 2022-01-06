@@ -48,10 +48,10 @@ echo "installing rpy2"
 sudo python -m pip install rpy2==2.9.4
 
 # downloads the required R packages locally in the same directory as setup.py
-wget https://cran.r-project.org/src/contrib/Archive/Rcpp/Rcpp_0.12.16.tar.gz
-sudo R CMD INSTALL Rcpp_0.12.16.tar.gz
-wget https://cran.r-project.org/src/contrib/Archive/arules/arules_1.5-5.tar.gz
-sudo R CMD INSTALL arules_1.5-5.tar.gz
+wget https://cran.r-project.org/src/contrib/Archive/Rcpp/Rcpp_1.0.7.tar.gz
+sudo R CMD INSTALL Rcpp_1.0.7.tar.gz
+wget https://cran.r-project.org/src/contrib/Archive/arules/arules_1.7-2.tar.gz
+sudo R CMD INSTALL arules_1.7-2.tar.gz
 wget https://github.com/cran/sbrl/archive/refs/tags/1.2.tar.gz
-mv 1.2.tar.gz sbrl_1.2.tar.gz 
+mv 1.2.tar.gz sbrl_1.2.tar.gz
 sudo R CMD INSTALL sbrl_1.2.tar.gz
