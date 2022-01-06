@@ -53,4 +53,5 @@ sudo R CMD INSTALL Rcpp_0.12.16.tar.gz
 wget https://cran.r-project.org/src/contrib/Archive/arules/arules_1.5-5.tar.gz
 sudo R CMD INSTALL arules_1.5-5.tar.gz
 wget https://github.com/cran/sbrl/archive/refs/tags/1.2.tar.gz
+mv 1.2.tar.gz sbrl_1.2.tar.gz 
 sudo R CMD INSTALL sbrl_1.2.tar.gz
