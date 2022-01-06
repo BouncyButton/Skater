@@ -281,7 +281,10 @@ class BRLC(object):
 
         data_as_r_frame = self.__r_frame(self.__s_apply(X, self.__as_factor))
         results = self.__r_sbrl.predict_sbrl(self.model, data_as_r_frame)
-        return pandas2ri.ri2py_dataframe(results).T
+        return pd.DataFrame(results).T  # newer rpy2 implementations are seamless and should work like this
+        # refer to
+        # https://pandas.pydata.org/pandas-docs/version/0.19.0/r_interface.html#updating-your-code-to-use-rpy2-functions
+        # old broken code: return pandas2ri.ri2py_dataframe(results).T
 
 
     def predict(self, X=None, prob_score=None, threshold=0.5, pos_label=1):
